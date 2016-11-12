@@ -1,0 +1,36 @@
+<head>
+    <title>ProductsKart</title>
+</head>
+<body>
+<header>
+    <div class="logo">ProductsKart</div>
+    <div class="bucketContainer">
+        {{> Bucket classes="icon-bucket" name="Cart" text="items" bucketContainer="#bucketPlace"}}
+    </div>
+</header>
+<div class="container">
+    {{> BucketItemsList parentTemplate="ProductList"}}
+    {{> ProductList}}
+</div>
+<footer>
+    copyright@BorschtSystems
+</footer>
+</body>
+
+
+<template name="ProductList">
+    <ul class="list">
+        {{#each products}}
+        {{> Product}}
+        {{ /each}}
+    </ul>
+</template>
+
+<template name="Product">
+    <li class="list-item">
+        <img src="/{{image}}"/>
+        <div class="name">{{name}}</div>
+        <div class="price">{{price}} USD</div>
+        {{> AddOrRemoveButton addButtonText="Add to Cart" removeButtonText="Remove From Cart"}}
+    </li>
+</template>

@@ -1,0 +1,18 @@
+.hidden {
+    display: none;
+}
+
+.bucket {
+    text-decoration: none;
+    color: #222;
+}
+
+.no-items {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+button[disabled="true"] {
+    background-color: #aaa;
+}

@@ -1,0 +1,25 @@
+<template name="Bucket">
+  <a href="#" class="bucket {{classes}}">
+      {{name}}
+      <sup>
+       <span id="no-of-items">{{item}}</span>
+          {{text}}
+      </sup>
+  </a>
+</template>
+
+<template name="AddOrRemoveButton">
+    {{#if remove}}
+    <button class="removeFromBucketBtn {{classes}}">
+        {{removeButtonText}}
+    </button>
+    {{else}}
+    <button class="addToBucketBtn {{classes}}" disabled="{{disabled}}">
+        {{addButtonText}}
+    </button>
+    {{/if}}
+</template>
+
+<template name="BucketItemsList">
+    <div class="bucketItemsListContainer {{displayStatus}}"></div>
+</template>
