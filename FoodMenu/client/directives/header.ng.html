@@ -1,0 +1,13 @@
+<div class="logo">
+    <a href="/">FoodMenu</a>
+</div>
+<div class="login-signup">
+    <ul>
+        <li ng-if="currentUser && currentUser.profile.role === 'admin'" class="btn">
+            <a href="/add-item">Add items</a>
+        </li>
+        <li>
+            <login-buttons></login-buttons>
+        </li>
+    </ul>
+</div >

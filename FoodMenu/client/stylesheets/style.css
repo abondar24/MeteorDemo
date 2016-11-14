@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e4560;
+    color: #fff;
+    padding: 20px 10px;
+    display: flex;
+}
+
+.logo {
+    font-size: 30px;
+    flex: 1 1 auto;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.login-signup {
+    align-self: left;
+
+}
+
+.login-signup ul {
+    margin-bottom: 0;
+}
+
+.login-signup ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.login-signup ul li > a {
+    color: #fff;
+}
+
+.login-signup ul li .dropdown-menu {
+    right: 0;
+    left: auto;
+
+}
+
+.food-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.food-list__item {
+    margin-top: 4em;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+@media (min-width: 992px) {
+    .food-list__item:nth-child(4n),
+    .food-list__item:first-child {
+        margin-left: 4%;
+    }
+}
+
+.food-list__item > div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.food-list__item > div:last-child {
+    border-bottom: none;
+}
+
+.food-list__item__name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.food-list__item__prize {
+    padding: 10px;
+}
+
+.ptr {
+    cursor: pointer;
+}
+

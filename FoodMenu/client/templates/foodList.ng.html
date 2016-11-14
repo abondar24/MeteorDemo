@@ -1,0 +1,28 @@
+<div ng-controller="FoodListController" class="container">
+    <ul class="food-list row">
+        <li class="col-xs-12 col-md-3 col-md-offset-1 food-list__item" ng-repeat="item in foodMenu">
+            <img ng-src="{{imageSrc(item.image)}}" width="100%"/>
+            <div class="food-list__item__name">{{item.name}}</div>
+            <div class="food-list__item__price">
+                Price:
+                <strong>{{item.price}}</strong>
+            </div>
+            <div class="food-list__item__quantity">
+                Available Quantity:
+                <strong>{{item.quantity}}</strong>
+            </div>
+            <div class="food-list__item__contents">
+                Ingredients:
+                <strong>{{item.contents}}</strong>
+            </div>
+            <div class="food-list__item__chef">
+                Chef:
+                <strong>{{item.chef_name}}</strong>
+            </div>
+            <div ng-if="currentUser && currentUser.profile.role ==='admin'" class="food-list__item__edit">
+                <a href="/edit-item/{{item._id}}">Edit</a> |
+                <a href="javascriptLvoid(0)" ng-click="deleteItem(item)">Delete</a>
+            </div>
+        </li>
+    </ul>
+</div>

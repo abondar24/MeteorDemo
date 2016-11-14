@@ -1,0 +1,59 @@
+<div class="container">
+    <form role="form">
+        <div class="form-group">
+            <label for="name">Item Name</label>
+            <input required type="text" class="form-control" id="name" placeholder="Food Item Name"
+                   ng-model="item.name"/>
+        </div>
+        <div class="form-group">
+            <label for="chef_name">Chef Name</label>
+            <input required type="text" class="form-control" id="chef_name" placeholder="Chef Name"
+                   ng-model="item.chef_name"/>
+        </div>
+        <div class="form-group">
+            <label for="contents">Ingrediants</label>
+            <input required type="text" class="form-control" id="contents" placeholder="Ingrediants"
+                   ng-model="item.contents"/>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <select required type="text" class="form-control" id="time" placeholder="Time"
+                    ng-model="item.time">
+                <option value="BreakFast">BreakFast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="image">Images</label>
+            <input type="file" class="form-control" id="image" placeholder="Image"
+                   placeholder="Image"
+                   onchange="angular.element(this).scope().selectImage(this)"
+                   ng-model="item.image"/>
+        </div>
+        <div ng-if="edit===true" class="form-group row">
+            <img ng-src="{{imageSrc}}" class="col-md-4"/>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input required type="number" class="form-control" id="quantity" placeholder="Quantity"
+                   ng-model="item.quantity"/>
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input required type="number" min="20" max="2000" class="form-control" id="price"
+                   placeholder="price" ng-model="item.price"/>
+        </div>
+        <div class="form-group">
+            <label for="is_published">Is Published</label>
+            <input type="checkbox" class="form-control" id="is_published"
+                   placeholder="Is Published" ng-model="item.is_published"/>
+        </div>
+        <div ng-if="edit===true" class="form-group">
+            <label for="is_deleted">Is Deleted</label>
+            <input type="checkbox" class="form-control" id="is_deleted"
+                   placeholder="Is Deleted" ng-model="item.is_deleted"/>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="save()">Submit</button>
+    </form>
+</div>
