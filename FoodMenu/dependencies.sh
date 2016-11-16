@@ -1,3 +1,5 @@
+#!bin/env bash
+
 #!bin/bash
 
 meteor remove insecure
