@@ -1,1 +1,43 @@
 /* CSS declarations go here */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e4560;
+    color: #fff;
+    padding: 20px 10px;
+    display: flex;
+}
+
+.logo {
+    font-size: 30px;
+    flex: 1 1 auto;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
