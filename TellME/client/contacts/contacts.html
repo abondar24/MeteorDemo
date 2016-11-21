@@ -1,0 +1,21 @@
+<template name="contacts">
+    <div class="contacts">
+        {{#if isLoading}}
+        <div class="loading">Loading...</div>
+        {{else }}
+        {{#if isContactsAvailable}}
+        <ul class="list">
+            {{#each contacts}}
+            <li>
+                <div>{{this.name}}</div>
+                <div>{{this.phone}}</div>
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <div class="text-center">No contact available</div>
+        {{/if}}
+        {{/if}}
+    </div>
+</template>
+

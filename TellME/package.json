@@ -1,0 +1,13 @@
+{
+  "name": "TellME",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^0.8.7",
+    "cordova": "^6.4.0",
+    "meteor-node-stubs": "^0.2.4"
+  }
+}

@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f6f6f6;
+    height: 100vh;
+}
+
+.loginContainer {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginContainer header {
+    font-size: 2em;
+    font-style: italic;
+}
+
+.loginContainer .login-close-text, .loginContainer .login-link-text {
+    display: none;
+}
+
+.loginContainer .accounts-dialog{
+    display: block;
+    margin: 0;
+}
+
+.loginContainer #login-dropdown-list {
+    position:  static;
+}
+
+.loginContainer .additional-link-container{
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+.loginContainer .additional-link-container a{
+    float: none !important;
+}
+
+.loginContainer #signup-link {
+    text-align: left !important;
+}

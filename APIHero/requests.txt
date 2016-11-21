@@ -1,0 +1,7 @@
+POST: localhost:8024/author-details
+
+{ name:"name",
+  author:"author"
+}
+
+GET:localhost:8024/author-details

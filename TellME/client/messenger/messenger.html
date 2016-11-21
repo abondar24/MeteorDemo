@@ -1,0 +1,27 @@
+<template name="messenger">
+    <div class="messenger-wrapper">
+        <div class="name text-center">
+            {{name}}
+        </div>
+        <ul>
+            {{#each messages}}
+            <li class="{{mineClass}}">
+                {{> message}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="type-area text-center">
+        <textarea name="message" class="editor" id="message"></textarea>
+        <button type="button" id="send" class="btn btn-primary">Send</button>
+    </div>
+</template>
+
+<template name="message">
+    <div class="senderName">{{senderName}}</div>
+    <div class="message">
+        <div class="message">{{content}}</div>
+        <div>{{readableDate(created_at)}}</div>
+        </div>
+</template>
+
